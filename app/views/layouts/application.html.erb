@@ -7,10 +7,23 @@
 
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <script type="text/javascript">
+      I18n.defaultLocale = "<%= I18n.default_locale %>";
+      I18n.locale = "<%= I18n.locale %>";
+  </script>
+  <%= javascript_pack_tag 'locale_switcher', 'data-turbolinks-track': 'reload' %>
 </head>
 
 <body>
 <header class="main">
+  <aside>
+    <%= form_tag store_index_path, class: 'locale' do %>
+      <%= select_tag 'set_locale',
+                     options_for_select(LANGUAGES, I18n.locale.to_s),
+                     onchange: 'this.form.submit()' %>
+      <%= submit_tag 'submit', id: "submit_locale_change" %>
+    <% end %>
+  </aside>
   <%= image_tag 'logo.png', alt: 'The Pragmatic Bookshelf' %>
   <h1><%= @page_title %></h1>
 </header>
@@ -22,10 +35,10 @@
       </div>
     <% end %>
     <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/products">Products</a></li>
-      <li><a href="/orders">Order</a></li>
-      <li><a href="/contact">Contact</a></li>
+      <li><a href="/"><%= t('.home') %></a></li>
+      <li><a href="/questions"><%= t('.questions') %></a></li>
+      <li><a href="/news"><%= t('.news') %></a></li>
+      <li><a href="/contact"><%= t('.contact') %></a></li>
     </ul>
     <% if session[:user_id] %>
       <nav class="logged_in_nav">
