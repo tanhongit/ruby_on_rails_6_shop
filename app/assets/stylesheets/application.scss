@@ -110,6 +110,17 @@ header.main {
     @media (min-width: 30em) {
       margin: 0; // desktop doesn't need this margin
     }
+    .checkout{
+      position: relative;
+      left: 3px;
+      top: 11px;
+      transition: none 0s ease 0s;
+      cursor: move;
+      background-color: green;
+    }
+    .checkout:hover{
+      background-color: indigo;
+    }
   }
 }
 
