@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RubyOnRails6Shop</title>
+    <title>Pragprog Books Online Store</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,8 +10,23 @@
   </head>
 
   <body>
-    <main class='<%= controller.controller_name %>'>
-      <%= yield %>
-    </main>
+    <header class="main">
+<%= image_tag 'logo.png', alt: 'The Pragmatic Bookshelf' %>
+<h1><%= @page_title %></h1>
+</header>
+<section class="content">
+<nav class="side_nav">
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="/questions">Questions</a></li>
+<li><a href="/news">News</a></li>
+<li><a href="/contact">Contact</a></li>
+</ul>
+</nav>
+<main class='<%= controller.controller_name %>'>
+<%= yield %>
+</main>
+
+</section>
   </body>
 </html>
