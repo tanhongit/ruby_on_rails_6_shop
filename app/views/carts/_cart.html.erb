@@ -15,8 +15,12 @@
       </tr>
     </tfoot>
   </table>
+  <div class="actions">
   <%= button_to 'Empty cart', cart,
                 method: :delete,
                 data: { confirm: 'Are you sure?' } %>
-
+    <%= button_to 'Checkout', new_order_path,
+    method: :get,
+    class: "checkout"%>
+    </div>
 </article>
