@@ -1,7 +1,7 @@
 <% if line_item == @current_item %>
-<tr class="line-item-highlight">
+  <tr class="line-item-highlight">
 <% else %>
-<tr>
+  <tr>
 <% end %>
 <td class="quantity"><%= line_item.quantity %></td>
 <td><%= line_item.product.title %></td>

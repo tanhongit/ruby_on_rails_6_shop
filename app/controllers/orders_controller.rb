@@ -1,7 +1,7 @@
 class OrdersController < ApplicationController
   include CurrentCart
-before_action :set_cart, only: [:new, :create]
-before_action :ensure_cart_isnt_empty, only: :new
+  before_action :set_cart, only: [:new, :create]
+  before_action :ensure_cart_isnt_empty, only: :new
   before_action :set_order, only: [:show, :edit, :update, :destroy]
 
   # GET /orders
@@ -35,7 +35,7 @@ before_action :ensure_cart_isnt_empty, only: :new
         Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
         format.html { redirect_to store_index_url, notice:
-        'Thank you for your order.' }
+            'Thank you for your order.' }
         # format.html { redirect_to @order, notice: 'Order was successfully created.' }
         format.json { render :show, status: :created, location: @order }
       else
@@ -70,19 +70,20 @@ before_action :ensure_cart_isnt_empty, only: :new
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_order
-      @order = Order.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def order_params
-      params.require(:order).permit(:name, :address, :email, :pay_type)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_order
+    @order = Order.find(params[:id])
+  end
 
-    def ensure_cart_isnt_empty
-      if @cart.line_items.empty?
+  # Only allow a list of trusted parameters through.
+  def order_params
+    params.require(:order).permit(:name, :address, :email, :pay_type)
+  end
+
+  def ensure_cart_isnt_empty
+    if @cart.line_items.empty?
       redirect_to store_index_url, notice: 'Your cart is empty'
-      end
     end
+  end
 end
