@@ -1,0 +1,1 @@
+# ruby_on_rails_6_shop
