@@ -65,9 +65,9 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :address => 'smtp.gmail.com',
-    :port => 587,
-    :domain => 'tanhongit.com',
-    :authentication => 'plain',
+    :port => 465,
+    :domain => 'smtp.gmail.com',
+    :authentication => 'SSL',
     :user_name => 'tanhongitverifi@gmail.com',
     :password => 'kkgdqneidrcgvqt',
     :enable_starttls_auto => true
