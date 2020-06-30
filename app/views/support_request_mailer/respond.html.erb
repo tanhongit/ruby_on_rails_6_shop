@@ -1,5 +1,6 @@
-<h1>SupportRequest#respond</h1>
 
-<p>
-  <%= @greeting %>, find me in app/views/support_request_mailer/respond.html.erb
-</p>
+<%= @support_request.response %>
+<hr>
+<blockquote>
+  <%= @support_request.body %>
+</blockquote>
