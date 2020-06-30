@@ -39,7 +39,7 @@ class OrdersController < ApplicationController
         
         ChargeOrderJob.perform_later(@order,pay_type_params.to_h)
         # OrderMailer.received(@order).deliver_later
-        @order.charge!(pay_type_params) # do not do this
+        # @order.charge!(pay_type_params) # do not do this
         format.html { redirect_to store_index_url(locale: I18n.locale), notice: I18n.t('.thanks') }
         # format.html { redirect_to @order, notice: 'Order was successfully created.' }
         format.json { render :show, status: :created, location: @order }
