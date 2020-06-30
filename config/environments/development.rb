@@ -61,4 +61,15 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   config.action_cable.disable_request_forgery_protection = true
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address => 'smtp.gmail.com',
+    :port => 587,
+    :domain => 'tanhongit.com',
+    :authentication => 'plain',
+    :user_name => 'tanhongitverifi@gmail.com',
+    :password => 'kkgdqneidrcgvqt',
+    :enable_starttls_auto => true
+}
 end
