@@ -54,5 +54,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Use Active Model has_secure_password
+# bundle install
 gem 'bcrypt', '~> 3.1.7'
 gem 'i18n-js'
+gem 'will_paginate', '>= 3.0'
