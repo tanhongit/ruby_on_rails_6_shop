@@ -1,6 +1,8 @@
 require "application_system_test_case"
 
 class OrdersTest < ApplicationSystemTestCase
+  include ActiveJob::TestHelper
+
   setup do
     @order = orders(:one)
   end
@@ -45,5 +47,9 @@ class OrdersTest < ApplicationSystemTestCase
     end
 
     assert_text "Order was successfully destroyed"
+  end
+
+  perform_enqueued_jobs do
+    click_button "Place Order"
   end
 end
