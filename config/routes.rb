@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    get 'book/action1'
+    get 'book/action2'
+  end
   get 'admin' => 'admin#index'
   controller :sessions do
     get  'login' => :new
