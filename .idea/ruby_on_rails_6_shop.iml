@@ -56,6 +56,10 @@
     <orderEntry type="library" scope="PROVIDED" name="i18n (v1.8.3, rbenv: 2.7.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n-js (v3.7.0, rbenv: 2.7.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jbuilder (v2.10.0, rbenv: 2.7.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="kaminari (v1.2.1, rbenv: 2.7.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="kaminari-actionview (v1.2.1, rbenv: 2.7.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="kaminari-activerecord (v1.2.1, rbenv: 2.7.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="kaminari-core (v1.2.1, rbenv: 2.7.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="listen (v3.2.1, rbenv: 2.7.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="loofah (v2.6.0, rbenv: 2.7.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mail (v2.7.1, rbenv: 2.7.1) [gem]" level="application" />
@@ -68,6 +72,7 @@
     <orderEntry type="library" scope="PROVIDED" name="msgpack (v1.3.3, rbenv: 2.7.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nio4r (v2.5.2, rbenv: 2.7.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.10.9, rbenv: 2.7.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="pagy (v3.8.2, rbenv: 2.7.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="public_suffix (v4.0.5, rbenv: 2.7.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="puma (v4.3.5, rbenv: 2.7.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack (v2.2.3, rbenv: 2.7.1) [gem]" level="application" />
