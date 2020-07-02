@@ -20,7 +20,7 @@ class OrderMailer < ApplicationMailer
   #
   #   en.order_mailer.shipped.subject
   #
-  def shipped
+  def shipped(order)
     # @greeting = "Hi"
 
     # mail to: "to@example.org"
