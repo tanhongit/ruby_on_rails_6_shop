@@ -104,6 +104,7 @@ GEM
     nio4r (2.5.2)
     nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
+    pagy (3.8.2)
     public_suffix (4.0.5)
     puma (4.3.5)
       nio4r (~> 2.0)
@@ -209,6 +210,7 @@ DEPENDENCIES
   i18n-js
   jbuilder (~> 2.7)
   listen (~> 3.2)
+  pagy (~> 3.5)
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.2)
   sass-rails (>= 6)
