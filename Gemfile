@@ -61,3 +61,4 @@ gem 'will_paginate', '>= 3.0'
 gem 'pagy', '~> 3.5'
 gem 'kaminari'
 gem "dotenv-rails"
+gem "figaro"

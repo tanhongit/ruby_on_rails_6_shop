@@ -12,13 +12,13 @@ class PayTypeSelector extends React.Component {
     this.state = { selectedPayType: null };
   }
 
-  // onPayTypeSelected(event) {
-  //   this.setState({ selectedPayType: event.target.value });
-  // }
-
   onPayTypeSelected(event) {
-    console.log(event.target.value);
+    this.setState({ selectedPayType: event.target.value });
   }
+
+  // onPayTypeSelected(event) {
+  //   console.log(event.target.value);
+  // }
 
   render() {
     let PayTypeCustomComponent = NoPayType;

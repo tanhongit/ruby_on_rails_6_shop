@@ -69,9 +69,10 @@ Rails.application.configure do
     :address => 'smtp.gmail.com',
     :port => 587,
     :authentication => 'SSL',
-    :user_name => 'tanhongitverifi@gmail.com',
-    :password => 'kkgdqneidrcgvqmt',
+    :user_name            => ENV['tanhongitverifi@gmail.com'],
+    :password             => ENV['kkgdqneidrcgvqmt'],
     :enable_starttls_auto => true
+    :authentication       => "plain",
   }
 
   config.active_storage.service = :local
