@@ -59,6 +59,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'i18n-js'
 gem 'will_paginate', '>= 3.0'
 gem 'pagy', '~> 3.5'
-gem 'kaminari'
+gem 'kaminari'       # gíup phân trang
+gem 'ransack'     #tạo form tìm kiếm
+gem 'bootstrap-kaminari-views' # giao diện đẹp cho phân trang
 gem "dotenv-rails"
 gem "figaro"
