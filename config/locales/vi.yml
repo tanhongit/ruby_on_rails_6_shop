@@ -1,0 +1,62 @@
+vi:
+
+  number:
+    currency:
+      format:
+        unit:      "$"
+        precision: 2
+        separator: "."
+        delimiter: ","
+        format:    "%u%n"
+
+  errors:
+    template:
+      body:        "Đã có những vấn đề với các yếu tố sau đây:"
+      header:
+        one:       "1 lỗi đã cấm% {model} này được lưu"
+        other:     "%{đếm} lỗi đã cấm% {model} này được lưu "
+
+  layouts:
+    application:
+      title:       "The Pragmatic Bookshelf"
+      home:        "Trang Chủ"
+      questions:   "Câu hỏi"
+      news:        "Tin tức"
+      contact:     "Tiếp xúc"
+
+  carts:
+    cart:
+      title:       "Giỏ hàng của bạn"
+      empty:       "Giỏ hàng trống"
+      checkout:    "Thủ tục thanh toán"
+
+  store:
+    index:
+      title_html:  "Danh mục thực dụng của bạn"
+      add_html:    "Thêm vào giỏ hàng"
+
+  orders:
+    new:
+      legend:       "Vui lòng nhập thông tin của bạn"
+    form:
+      name:         "Tên"
+      address_html: "Địa chỉ"
+      email:        "E-mail"
+      pay_type:     "Thanh toán bằng"
+      pay_prompt_html: "Chọn một Phương thức thanh toán"
+      submit:       "Đặt hàng"
+      pay_types:
+        check:           "Check"
+        credit_card:     "Credit Card"
+        purchase_order:  "Purchase Order"
+      check_pay_type:
+        routing_number: "định tuyến #"
+        account_number: "Account #"
+      credit_card_pay_type:
+        cc_number: "CC #"
+        expiration_date: "Expiry"
+      purchase_order_pay_type:
+        po_number: "PO #"
+
+
+  thanks:          "Cảm ơn bạn đã đặt hàng"
