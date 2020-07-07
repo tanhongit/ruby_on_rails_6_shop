@@ -18,9 +18,12 @@ class OrdersController < ApplicationController
     # @orders = Order.page(params[:page]).per(5)
 
     # https://viblo.asia/p/su-dung-gem-ransack-de-search-trong-rails-jvElaEJolkw
+    # @search = Order.all.ransack params[:q]
+    # @orders = @search.result.page(params[:page])
+
+    # https://stackoverflow.com/questions/36116427/kaminari-and-ransack-gem
     @search = Order.all.ransack params[:q]
-    @orders = @search.result.page(params[:page])
-    respond_to :js if request.xhr?
+    @orders = @search.result(distinct: true).paginate(page: params[:page], per_page: 10)
   end
 
   # GET /orders/1
