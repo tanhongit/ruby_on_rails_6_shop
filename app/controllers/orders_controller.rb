@@ -10,9 +10,17 @@ class OrdersController < ApplicationController
   # GET /orders.json
   def index
     # @orders = Order.all.page params[:page]
+
     # @orders = Order.page(2).per(20).padding(3)
+
     # @orders = Order.order(:name).page params[:page]
-    @orders = Order.page(params[:page]).per(5)
+    
+    # @orders = Order.page(params[:page]).per(5)
+
+    # https://viblo.asia/p/su-dung-gem-ransack-de-search-trong-rails-jvElaEJolkw
+    @search = Order.all.ransack params[:q]
+    @orders = @search.result.page(params[:page])
+    respond_to :js if request.xhr?
   end
 
   # GET /orders/1

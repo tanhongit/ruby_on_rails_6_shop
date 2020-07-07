@@ -72,3 +72,5 @@ gem 'bootstrap', '~> 4.5.0'
 gem 'jquery-rails'
 #permission
 gem "cancancan"
+
+gem 'config'

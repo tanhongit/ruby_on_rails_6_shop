@@ -1,0 +1,14 @@
+show_limit:
+  show_5: 5
+  show_10: 10
+  show_15: 15
+  show_20: 20
+  show_30: 30
+  show_50: 50
+per_pages:
+  first: 5
+  second: 10
+  third: 20
+  fourth: 25
+  fifth: 50
+  sixth: 100

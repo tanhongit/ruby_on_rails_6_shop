@@ -4,6 +4,15 @@
 
 <h1>Orders</h1>
 
+<br>
+<%= search_form_for @search do |f| %>
+  # Tìm kiếm với name like %abc%
+  <%= f.label :name_cont %>
+  <%= f.search_field :name_cont %>
+  <%= f.submit %>
+<% end %>
+<br>
+
 <table>
   <thead>
   <tr>
