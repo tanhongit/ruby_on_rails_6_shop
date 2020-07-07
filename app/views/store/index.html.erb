@@ -1,6 +1,16 @@
 <% if notice %>
   <aside id="notice"><%= notice %></aside>
 <% end %>
+
+<br>
+<%= search_form_for @search do |f| %>
+  # Tìm kiếm với name like %abc%
+  <%= f.label :title_cont %>
+  <%= f.search_field :title_cont %>
+  <%= f.submit %>
+<% end %>
+<br>
+
 <h1><%= t('.title_html') %></h1>
 <ul class="catalog">
   <% cache @products do %>

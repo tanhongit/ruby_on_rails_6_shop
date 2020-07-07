@@ -12,7 +12,8 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all.order(:title)
+    @search = Product.all.ransack params[:q]
+    @products = @search.result(distinct: true).paginate(page: params[:page], per_page: 10)
     respond_to do |format|
       format.html
     end
