@@ -15,7 +15,7 @@ module RubyOnRails6Shop
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
-    config.filter_parameters += [ :credit_card_number ]
+    config.filter_parameters += [:credit_card_number]
 
     config.middleware.use I18n::JS::Middleware
 

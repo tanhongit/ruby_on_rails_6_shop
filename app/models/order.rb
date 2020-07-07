@@ -31,7 +31,7 @@ class Order < ApplicationRecord
       payment_details[:account] = pay_type_params[:account_number]
     when "Credit card"
       payment_method = :credit_card
-      month,year = pay_type_params[:expiration_date].split(//)
+      month, year = pay_type_params[:expiration_date].split(//)
       payment_details[:cc_num] = pay_type_params[:credit_card_number]
       payment_details[:expiration_month] = month
       payment_details[:expiration_year] = year
@@ -41,9 +41,9 @@ class Order < ApplicationRecord
     end
 
     payment_result = Pago.make_payment(
-      order_id: id,
-      payment_method: payment_method,
-      payment_details: payment_details
+        order_id: id,
+        payment_method: payment_method,
+        payment_details: payment_details
     )
 
     if payment_result.succeeded?

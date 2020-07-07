@@ -5,6 +5,6 @@
  * courses, books, articles, and the like. Contact us if you are in doubt.
  * We make no guarantees that this code is fit for any purpose.
  * Visit http://www.pragmaticprogrammer.com/titles/rails6 for more book information.
-***/
+ ***/
 document.addEventListener('turbolinks:load', () =>
-  document.getElementById('submit_locale_change').style.display='none')
+    document.getElementById('submit_locale_change').style.display = 'none')

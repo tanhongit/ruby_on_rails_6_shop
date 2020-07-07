@@ -1,4 +1,3 @@
-
 <ul>
   <% @support_requests.each do |support_request| %>
     <li>
@@ -7,10 +6,10 @@
         <code><%= support_request.email %></code> writes:
       </h1>
       <p>
-        <blockquote>
-          <h2><%= support_request.subject %></h2>
-          <%= support_request.body %>
-        </blockquote>
+      <blockquote>
+        <h2><%= support_request.subject %></h2>
+        <%= support_request.body %>
+      </blockquote>
       </p>
       <% if support_request.order %>
         <h3>Recent Order</h3>
@@ -42,7 +41,7 @@
       <% else %>
         <h3 class="notice">No associated order</h3>
       <% end %>
-       <% if support_request.response.blank? %>
+      <% if support_request.response.blank? %>
         <%= form_with(model: support_request,
                       local: true,
                       class: "depot_form") do |form| %>
@@ -57,9 +56,9 @@
       <% else %>
         <h4>Our response:</h4>
         <p>
-          <blockquote>
-            <%= support_request.response %>
-          </blockquote>
+        <blockquote>
+          <%= support_request.response %>
+        </blockquote>
         </p>
       <% end %>
       <hr>
