@@ -69,7 +69,8 @@ Rails.application.configure do
     :domain => 'smtp.gmail.com',
     :authentication => 'SSL',
     :user_name => 'tanhongitverifi@gmail.com',
-    :password => 'kkgdqneidrcgvqt',
+    #:password => 'kkgdqneidrcgvqt',
+    :password => '03052000.phuongtan.happy.200012357',
     :enable_starttls_auto => true
   }
 
