@@ -14,7 +14,7 @@ class UsersController < ApplicationController
   def index
     # @users = User.order(:name)
     @search = User.all.ransack params[:q]
-    @users = @search.result(distinct: true).paginate(page: params[:page], per_page: 10)
+    @users = @search.result(distinct: true).paginate(page: params[:page], per_page: 5)
   end
 
   # GET /users/1

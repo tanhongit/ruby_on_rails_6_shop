@@ -23,7 +23,7 @@ class OrdersController < ApplicationController
 
     # https://stackoverflow.com/questions/36116427/kaminari-and-ransack-gem
     @search = Order.all.ransack params[:q]
-    @orders = @search.result(distinct: true).paginate(page: params[:page], per_page: 10)
+    @orders = @search.result(distinct: true).paginate(page: params[:page], per_page: 15)
   end
 
   # GET /orders/1
