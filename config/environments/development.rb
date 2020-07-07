@@ -66,11 +66,11 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     :address => 'smtp.gmail.com',
     :port => 465,
-    :domain => 'smtp.gmail.com',
+    :domain => 'http://localhost:3000',
     :authentication => 'SSL',
     :user_name => 'tanhongitverifi@gmail.com',
-    #:password => 'kkgdqneidrcgvqt',
-    :password => '03052000.phuongtan.happy.200012357',
+    :password => 'kkgdqneidrcgvqt',
+    # :password => '03052000.phuongtan.happy.200012357',
     :enable_starttls_auto => true
   }
 
