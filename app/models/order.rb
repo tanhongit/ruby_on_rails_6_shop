@@ -1,4 +1,5 @@
 class Order < ApplicationRecord
+  paginates_per 50
   require 'pago'
 
   has_many :line_items, dependent: :destroy
