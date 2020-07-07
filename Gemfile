@@ -74,3 +74,6 @@ gem 'jquery-rails'
 gem "cancancan"
 
 gem 'config'
+# rails g config:install
+gem "simple_form"
+# rails generate simple_form:install
