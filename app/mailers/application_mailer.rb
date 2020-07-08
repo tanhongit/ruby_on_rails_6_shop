@@ -18,3 +18,7 @@ class ApplicationMailer < ActionMailer::Base
   #        delivery_method_options: delivery_options)
   # end
 end
+
+
+
+# phai bat cho phep ung dung ben thu 3: https://support.google.com/accounts/answer/3466521?hl=vi&authuser=1
