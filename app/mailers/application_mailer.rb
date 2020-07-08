@@ -7,7 +7,7 @@ class ApplicationMailer < ActionMailer::Base
   #   delivery_options = {
   #     address: 'smtp.gmail.com',
   #     port: 587,
-  #     domain: 'http://localhost:3000/',
+  #     domain: 'localhost:3000',
   #     user_name: ENV['tanhongitverifi@gmail.com'],
   #     password: ENV['03052000.phuongtan.happy.200012357'],
   #     authentication: 'plain',
