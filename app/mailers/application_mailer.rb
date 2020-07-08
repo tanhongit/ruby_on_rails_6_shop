@@ -9,7 +9,7 @@ class ApplicationMailer < ActionMailer::Base
   #     port: 587,
   #     domain: 'localhost:3000',
   #     user_name: ENV['tanhongitverifi@gmail.com'],
-  #     password: ENV['03052000.phuongtan.happy.200012357'],
+  #     password: ENV['mat khau'],
   #     authentication: 'plain',
   #     enable_starttls_auto: true
   #   }

@@ -1,3 +1,12 @@
+<br>
+<%= search_form_for @search do |f| %>
+  # Tìm kiếm với name like %abc%
+  <%= f.label :email_cont %>
+  <%= f.search_field :email_cont %>
+  <%= f.submit %>
+<% end %>
+<br>
+
 <ul>
   <% @support_requests.each do |support_request| %>
     <li>
