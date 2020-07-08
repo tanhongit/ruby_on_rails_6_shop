@@ -8,7 +8,9 @@
 #---
 class SupportRequestsController < ApplicationController
   def index
-    @support_requests = SupportRequest.all
+    # @support_requests = SupportRequest.all
+    @search = SupportRequest.all.ransack params[:q]
+    @support_requests = @search.result(distinct: true).paginate(page: params[:page], per_page: 5)
   end
 
   def update
