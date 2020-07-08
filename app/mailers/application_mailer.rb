@@ -1,5 +1,5 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'tanhongitverifi@gmail.com'
+  default from: 'henrywingard@my.smccd.edu'
   layout 'mailer'
 
   # private
