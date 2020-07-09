@@ -28,7 +28,7 @@
 !/storage/.keep
 
 # /public/assets
-.byebug_history
+# .byebug_history
 
 # Ignore master key for decrypting credentials and more.
 # /config/master.key
@@ -39,9 +39,9 @@
 # /node_modules
 # /yarn-error.log
 
-yarn-debug.log*
-.yarn-integrity
+# yarn-debug.log*
+# .yarn-integrity
 
-config/settings.local.yml
-config/settings/*.local.yml
-config/environments/*.local.yml
+# config/settings.local.yml
+# config/settings/*.local.yml
+# config/environments/*.local.yml
