@@ -1,24 +1,8 @@
-# README
+# Welcome to ecommerce Application Rails 6 by TANHONGIT
+Create the ecommerce application implementation using Ruby on Rails 6.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Building the application
+We are going to build the web application using:
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Ruby: version ruby 2.7.1
+- Rails: version 6.0.3.2
