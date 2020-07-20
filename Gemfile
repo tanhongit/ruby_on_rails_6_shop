@@ -77,3 +77,6 @@ gem 'config'
 # rails g config:install
 gem "simple_form"
 # rails generate simple_form:install
+
+gem "figaro"
+# bundle exec figaro install

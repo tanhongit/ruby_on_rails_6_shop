@@ -68,8 +68,8 @@ Rails.application.configure do
       :port => 587,
       #:domain => 'http://localhost:3000/', #false
       :domain => 'localhost:3000', #true
-      :user_name => 'henrywingard@my.smccd.edu',
-      :password => 'tan.zin.happy.200012357',
+      :user_name => ENV['user_mail'],
+      :password => ENV['user_password'],
       :authentication => 'plain',
       :enable_starttls_auto => true
   }
