@@ -20,5 +20,9 @@ module RubyOnRails6Shop
     config.middleware.use I18n::JS::Middleware
 
     config.autoload_paths += %W(#{Rails.root}/lib)
+
+    config.assets.initialize_on_precompile = false
+
+    config.i18n.fallbacks = true
   end
 end
