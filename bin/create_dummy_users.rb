@@ -1,5 +1,5 @@
 User.transaction do
-    (1..5).each do |i|
+    (1..55).each do |i|
         User.create(:name => "tanhong#{i}",
                     :password => "tanhong#{i}",
                     :password_confirmation => "tanhong#{i}")

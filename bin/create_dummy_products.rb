@@ -6,4 +6,4 @@ Product.transaction do
                     :price => 20)
     end
 end
-# rails runner bin/create_dummy_orders.rb
+# rails runner bin/create_dummy_products.rb

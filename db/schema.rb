@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_08_161721) do
+ActiveRecord::Schema.define(version: 2020_06_30_023523) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "action_mailbox_inbound_emails", force: :cascade do |t|
     t.integer "status", default: 0, null: false
@@ -21,21 +24,11 @@ ActiveRecord::Schema.define(version: 2020_07_08_161721) do
     t.index ["message_id", "message_checksum"], name: "index_action_mailbox_inbound_emails_uniqueness", unique: true
   end
 
-  create_table "action_text_rich_texts", force: :cascade do |t|
-    t.string "name", null: false
-    t.text "body"
-    t.string "record_type", null: false
-    t.integer "record_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["record_type", "record_id", "name"], name: "index_action_text_rich_texts_uniqueness", unique: true
-  end
-
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
-    t.integer "record_id", null: false
-    t.integer "blob_id", null: false
+    t.bigint "record_id", null: false
+    t.bigint "blob_id", null: false
     t.datetime "created_at", null: false
     t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
@@ -58,12 +51,12 @@ ActiveRecord::Schema.define(version: 2020_07_08_161721) do
   end
 
   create_table "line_items", force: :cascade do |t|
-    t.integer "product_id", null: false
+    t.bigint "product_id", null: false
     t.integer "cart_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "quantity", default: 1
-    t.integer "order_id"
+    t.bigint "order_id"
     t.index ["cart_id"], name: "index_line_items_on_cart_id"
     t.index ["order_id"], name: "index_line_items_on_order_id"
     t.index ["product_id"], name: "index_line_items_on_product_id"
@@ -87,28 +80,11 @@ ActiveRecord::Schema.define(version: 2020_07_08_161721) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "room_messages", force: :cascade do |t|
-    t.integer "room_id", null: false
-    t.integer "user_id", null: false
-    t.text "message"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["room_id"], name: "index_room_messages_on_room_id"
-    t.index ["user_id"], name: "index_room_messages_on_user_id"
-  end
-
-  create_table "rooms", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["name"], name: "index_rooms_on_name", unique: true
-  end
-
   create_table "support_requests", force: :cascade do |t|
-    t.string "email"
-    t.string "subject"
-    t.text "body"
-    t.integer "order_id"
+    t.string "email", comment: "Email of the submitter"
+    t.string "subject", comment: "Subject of their support email"
+    t.text "body", comment: "Body of their support email"
+    t.bigint "order_id", comment: "their most recent order, if applicable"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["order_id"], name: "index_support_requests_on_order_id"
@@ -125,7 +101,5 @@ ActiveRecord::Schema.define(version: 2020_07_08_161721) do
   add_foreign_key "line_items", "carts"
   add_foreign_key "line_items", "orders"
   add_foreign_key "line_items", "products"
-  add_foreign_key "room_messages", "rooms"
-  add_foreign_key "room_messages", "users"
   add_foreign_key "support_requests", "orders"
 end

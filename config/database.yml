@@ -5,21 +5,27 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: sqlite3
+  adapter: postgresql
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
+  username: rails_6_shop
+  password: 1234
+  host: localhost
+
+# create user "rails_6_shop" with password '1234';
+# create database "rails_6_shop" owner "rails_6_shop"; 
+# rails db:migrate RAILS_ENV=development
 
 development:
   <<: *default
-  database: db/development.sqlite3
-
+  database: rails_6_shop
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: db/test.sqlite3
+  database: rails_6_shop_test
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: rails_6_shop_production
