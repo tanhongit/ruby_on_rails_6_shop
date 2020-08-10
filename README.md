@@ -23,6 +23,39 @@ We are going to build the web application using:
 ...
 ```
 
+# 4. Runing
+
+## 4.1. Clone Repo
+
+```
+$ git clone https://github.com/TanHongIT/ruby_on_rails_6_shop
+$ cd ruby_on_rails_6_shop
+```
+
+## 4.1. Change your mail
+
+Go to config directory end edit file "application.yml"
+
+```
+user_mail: 'yourmail@gmail.com'
+user_password: 'your password'
+```
+
+## 4.3. Run server 
+
+```
+rails s
+```
+
+# 5. User Login
+
+> **_Account login on Backend_**
+
+```
+user :
+    username: tànhong      | password: tànhong
+```
+
 ## Support for me
 Support this project :stuck_out_tongue_winking_eye: :pray:
 <p align="center">
