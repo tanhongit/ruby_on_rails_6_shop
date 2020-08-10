@@ -1,6 +1,17 @@
 # Welcome to ecommerce Application Rails 6 by TANHONGIT
 Create the ecommerce application implementation using Ruby on Rails 6.
 
+# Demo
+
+You can try it at https://rails6shop.herokuapp.com/
+
+> **_Account login on Backend_**
+
+```
+user :
+    username: tanhong1     | password: tanhong1
+```
+
 # 1. Technology
 - Ruby on Rails
 
@@ -53,7 +64,8 @@ rails s
 
 ```
 user :
-    username: tànhong      | password: tànhong
+    username: tanhong      | password: tanhong
+    username: tanhong1     | password: tanhong1
 ```
 
 ## Support for me
