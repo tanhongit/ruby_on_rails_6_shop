@@ -120,7 +120,7 @@ $ bundle exec rake webpacker:install
 
 ### 4.8. Load data into database
 
-We use loop loop to load data into database, run the following commands in turn:
+We use loop to load data into database, run the following commands in turn:
 
 ```
 $ rails runner bin/create_dummy_orders.rb
