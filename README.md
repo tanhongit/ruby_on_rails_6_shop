@@ -36,26 +36,102 @@ We are going to build the web application using:
 
 # 4. Runing
 
-## 4.1. Clone Repo
+### 4.1. Clone Repo
 
 ```
 $ git clone https://github.com/TanHongIT/ruby_on_rails_6_shop
 $ cd ruby_on_rails_6_shop
 ```
 
-## 4.1. Change your mail
+### 4.2. Bundle Install 
 
-Go to config directory end edit file "application.yml"
+```
+$ bundle install
+```
+
+### 4.3. Yarn Install 
+
+```
+$ yarn install
+```
+
+### 4.4. Create database with Postgresql
+
+You must change the appropriate database configuration
+
+Change configuration at _"config/database.yml"_ with Postgresql.
+
+```ruby
+default: &default
+  adapter: postgresql
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  username: ruby_on_rails_6_shop
+  password: 1234
+  host: localhost
+
+# tutorial for ubuntu linux:
+# sudo -u postgres psql
+# create user "chat_room_rails_6" with password '1234';  
+# create database "chat_room_rails_6" owner "chat_room_rails_6"; 
+
+development:
+  <<: *default
+  database: ruby_on_rails_6_shop_6
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  database: ruby_on_rails_6_shop_test
+
+production:
+  <<: *default
+  database: ruby_on_rails_6_shop_production
+```
+
+### 4.5. run rails db:migrate
+
+```
+$ rails db:migrate
+```
+
+
+### 4.6. Change your mail
+
+run console 
+
+```
+$ bundle exec figaro install
+```
+
+Go to config directory and add to file "config/application.yml"
 
 ```
 user_mail: 'yourmail@gmail.com'
 user_password: 'your password'
 ```
-
-## 4.3. Run server 
+### 4.7. Install Webpacker 
 
 ```
-rails s
+$ bundle exec rake webpacker:install
+```
+
+### 4.8. Load data into database
+
+We use loop loop to load data into database, run the following commands in turn:
+
+```
+$ rails runner bin/create_dummy_orders.rb
+$ rails runner bin/create_dummy_products.rb
+$ rails runner bin/create_dummy_users.rb
+```
+
+### 4.9. Run server 
+
+```
+$ rails s
 ```
 
 # 5. User Login
