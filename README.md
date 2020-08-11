@@ -72,8 +72,8 @@ default: &default
 
 # tutorial for ubuntu linux:
 # sudo -u postgres psql
-# create user "chat_room_rails_6" with password '1234';  
-# create database "chat_room_rails_6" owner "chat_room_rails_6"; 
+# create user "ruby_on_rails_6_shop" with password '1234';  
+# create database "ruby_on_rails_6_shop" owner "ruby_on_rails_6_shop"; 
 
 development:
   <<: *default
@@ -100,7 +100,7 @@ $ rails db:migrate
 
 ### 4.6. Change your mail
 
-run console 
+Run console :
 
 ```
 $ bundle exec figaro install
@@ -140,7 +140,6 @@ $ rails s
 
 ```
 user :
-    username: tanhong      | password: tanhong
     username: tanhong1     | password: tanhong1
 ```
 
