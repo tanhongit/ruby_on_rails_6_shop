@@ -91,6 +91,8 @@ production:
   database: ruby_on_rails_6_shop_production
 ```
 
+You must change the username, password and database name accordingly!
+
 ### 4.5. run rails db:migrate
 
 ```
