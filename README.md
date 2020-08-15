@@ -59,7 +59,7 @@ $ yarn install
 
 You must change the appropriate database configuration
 
-Change configuration at _"config/database.yml"_ with Postgresql.
+Change configuration at _"**config/database.yml**"_ with Postgresql.
 
 ```ruby
 default: &default
@@ -100,20 +100,58 @@ $ rails db:migrate
 ```
 
 
-### 4.6. Change your mail
+### 4.6. Change your mail for mailing function
 
-Run console :
+#### 4.6.1 Run console :
 
 ```
 $ bundle exec figaro install
 ```
 
-Go to config directory and add to file "config/application.yml"
+#### 4.6.2 Go to config directory and add to file "**config/application.yml**"
 
 ```
 user_mail: 'yourmail@gmail.com'
 user_password: 'your password'
 ```
+
+#### 4.6.3 Change your mail in **app/mailers/application_mailer.rb**
+
+```ruby
+class ApplicationMailer < ActionMailer::Base
+  default from: 'change_your_mail'
+  layout 'mailer'
+```
+
+#### 4.6.4 Change your mail in **app/mailers/order_mailer.rb**
+
+```ruby
+class OrderMailer < ApplicationMailer
+  default from: 'Tan Hong <henrywingard@my.smccd.edu>'
+```
+
+#### 4.6.5 Change your mail in **app/mailers/support_request_mailer.rb**
+
+```ruby
+ 
+class SupportRequestMailer < ApplicationMailer
+
+  # Subject can be set in your I18n file at config/locales/en.yml
+  # with the following lookup:
+  #
+  #   en.support_request_mailer.respond.subject
+  #
+  default from: "henrywingard@my.smccd.edu"
+```
+
+#### 4.6. Change your mail in **app/mailboxes/application_mailbox.rb**
+
+```ruby
+class ApplicationMailbox < ActionMailbox::Base
+  routing "henrywingard@my.smccd.edu" => :support
+end
+```
+
 ### 4.7. Install Webpacker 
 
 ```
