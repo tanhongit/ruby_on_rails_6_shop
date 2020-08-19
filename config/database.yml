@@ -12,6 +12,7 @@ default: &default
   password: 1234
   host: localhost
 
+# sudo -u postgres psql
 # create user "rails_6_shop" with password '1234';
 # create database "rails_6_shop" owner "rails_6_shop"; 
 # rails db:migrate RAILS_ENV=development
